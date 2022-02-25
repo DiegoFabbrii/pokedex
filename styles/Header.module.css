@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(185, 103, 103);
+    color: #f7f7f7;
+}
+
+.container {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
