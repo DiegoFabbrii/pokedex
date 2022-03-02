@@ -2,7 +2,8 @@
     margin: 50px auto;
     width: 80vw;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    justify-content: center;
     gap: 30px;
 }
 
@@ -36,6 +37,7 @@
     background-color: rgb(129, 70, 70);
 }
 
-.pokemonImage {
-    margin: 15px 0;
+.pokemonImg img {
+    width: 130px;
+    height: 130px;
 }

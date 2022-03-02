@@ -1,31 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
 import style from "../styles/MainContent.module.css";
+import SearchInput from "./searchInput";
 
-export default function PokemonCard({ results }) {
+export default function PokemonCard({
+    results,
+    handleSearch,
+    searchPokemon,
+    search,
+    setSearchPokemon,
+}) {
     return (
-        <div className={style.container}>
-            {results.map((pokemon, index) => {
-                const imageParams = `00${index + 1}`.slice(-3);
-                const pokemonImage = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${imageParams}.png`;
-                return (
-                    <div key={index} className={style.pokemonCard}>
-                        <p>{pokemon.name}</p>
-                        <div className={style.pokemonImage}>
-                            <Image
-                                src={pokemonImage}
-                                alt={pokemon.name}
-                                width="130px"
-                                height="130px"
-                            />
-                        </div>
+        <>
+            <SearchInput
+                results={results}
+                setSearchPokemon={setSearchPokemon}
+                search={search}
+                searchPokemon={searchPokemon}
+                handleSearch={handleSearch}
+            />
 
-                        <Link href={`/pokemon/${index + 1}`}>
-                            <a>Detalhes</a>
-                        </Link>
-                    </div>
-                );
-            })}
-        </div>
+            <div className={style.container}>
+                {searchPokemon.map((pokemon, index) => {
+                    return (
+                        <div key={index} className={style.pokemonCard}>
+                            <p>{pokemon.name}</p>
+                            <div className={style.pokemonImg}>
+                                <Image
+                                    src={pokemon.pokemonImage}
+                                    alt={pokemon.name}
+                                    width="130px"
+                                    height="130px"
+                                />
+                            </div>
+
+                            <Link href={`/pokemon/${pokemon.id}`}>
+                                <a>Detalhes</a>
+                            </Link>
+                        </div>
+                    );
+                })}
+            </div>
+        </>
     );
 }

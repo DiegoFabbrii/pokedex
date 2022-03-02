@@ -1,0 +1,26 @@
+.container {
+    width: 80vw;
+    margin: 30px auto;
+}
+
+.search {
+    max-width: 220px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.search svg {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search input {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500px;
+    color: rgba(0, 0, 0, 0.5);
+    outline: none;
+}

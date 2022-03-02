@@ -9,13 +9,14 @@
 .container {
     width: 90vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-.logo {
+.logo a {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #f7f7f7;
 }

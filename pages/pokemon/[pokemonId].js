@@ -1,24 +1,11 @@
-import Image from "next/image";
+import PokemonDetails from "../../components/pokemonDetails";
 
 export default function PokemonDeatails({ pokemon }) {
     console.log(pokemon);
     const { types } = pokemon;
     return (
         <>
-            <h1>{pokemon.name}</h1>
-            <Image
-                src={pokemon.pokemonImage}
-                alt={pokemon.name}
-                width="150px"
-                height="150px"
-            />
-            {types.map((type, index) => {
-                return (
-                    <div key={index}>
-                        <p>{type.type.name}</p>
-                    </div>
-                );
-            })}
+            <PokemonDetails pokemon={pokemon} />
         </>
     );
 }
