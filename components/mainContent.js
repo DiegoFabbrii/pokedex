@@ -1,8 +1,8 @@
 import style from "../styles/MainContent.module.css";
 import SearchInput from "./searchInput";
-import Pagination from "./pagination";
 import { useState } from "react";
 import PokemonCard from "./pokemonCard";
+import Pagination from "./pagination";
 
 export default function MainContent({
     results,
@@ -19,7 +19,7 @@ export default function MainContent({
 
     const startIndex = itensPerPage * currentPage;
     const endIndex = startIndex + itensPerPage;
-    const currentIndex = results.slice(startIndex);
+    const currentIndex = results.slice(startIndex, endIndex);
 
     const pokemon = search === "" ? currentIndex : searchPokemon;
 
