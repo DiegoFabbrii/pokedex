@@ -19,7 +19,7 @@ export default function MainContent({
 
     const startIndex = itensPerPage * currentPage;
     const endIndex = startIndex + itensPerPage;
-    const currentIndex = results.slice(startIndex, endIndex);
+    const currentIndex = results.slice(startIndex);
 
     const pokemon = search === "" ? currentIndex : searchPokemon;
 
