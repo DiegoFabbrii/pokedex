@@ -51,3 +51,5 @@ Next.js
 > ## funcionalidades do projeto
 
 Input de pesquisa, Paginação, Páginas dinâmicas
+
+[Link o projeto](https://pokedex-iota-five-92.vercel.app/)
