@@ -12,7 +12,7 @@ export default function SearchInput({
         if (search === "") return setSearchPokemon(results);
 
         const pokemonResearched = results.filter((pokemon) => {
-            return pokemon.name.includes(search);
+            return pokemon.name.toLowerCase().includes(search.toLowerCase());
         });
 
         setSearchPokemon(pokemonResearched);
