@@ -1,46 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
-import style from "../styles/MainContent.module.css";
-import SearchInput from "./searchInput";
+import style from "../styles/PokemonCard.module.css";
 
-export default function PokemonCard({
-    results,
-    handleSearch,
-    searchPokemon,
-    search,
-    setSearchPokemon,
-}) {
+export default function PokemonCard({ pokemon }) {
     return (
         <>
-            <SearchInput
-                results={results}
-                setSearchPokemon={setSearchPokemon}
-                search={search}
-                searchPokemon={searchPokemon}
-                handleSearch={handleSearch}
-            />
-
-            <div className={style.container}>
-                {searchPokemon.map((pokemon, index) => {
-                    return (
-                        <div key={index} className={style.pokemonCard}>
-                            <p>{pokemon.name}</p>
-                            <div className={style.pokemonImg}>
-                                <Image
-                                    src={pokemon.pokemonImage}
-                                    alt={pokemon.name}
-                                    width="130px"
-                                    height="130px"
-                                />
-                            </div>
-
-                            <Link href={`/pokemon/${pokemon.id}`}>
-                                <a>Detalhes</a>
-                            </Link>
+            {pokemon.map((item, index) => {
+                return (
+                    <div key={index} className={style.pokemonCard}>
+                        <p>{item.name}</p>
+                        <div className={style.pokemonImg}>
+                            <Image
+                                src={item.pokemonImage}
+                                alt={item.name}
+                                width="130px"
+                                height="130px"
+                            />
                         </div>
-                    );
-                })}
-            </div>
+
+                        <Link href={`/pokemon/${item.id}`}>
+                            <a>Detalhes</a>
+                        </Link>
+                    </div>
+                );
+            })}
         </>
     );
 }

@@ -16,7 +16,7 @@ export default function SearchInput({
         });
 
         setSearchPokemon(pokemonResearched);
-    }, [search]);
+    }, [search, results, setSearchPokemon]);
 
     return (
         <>

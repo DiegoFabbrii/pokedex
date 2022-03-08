@@ -1,0 +1,29 @@
+.container {
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.buttonList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container button {
+    width: 30px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.buttons:hover,
+.buttonActive {
+    background-color: rgba(185, 103, 103, 0.747);
+    color: #f7f7f7;
+}

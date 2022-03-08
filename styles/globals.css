@@ -12,3 +12,11 @@ body {
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(185, 103, 103);
+}

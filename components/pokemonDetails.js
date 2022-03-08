@@ -10,12 +10,16 @@ export default function PokemonDetails({ pokemon }) {
                 <Back />
 
                 <h1>{pokemon.name}</h1>
-                <Image
-                    src={pokemon.pokemonImage}
-                    alt={pokemon.name}
-                    width="200px"
-                    height="200px"
-                />
+
+                <div className={style.image}>
+                    <Image
+                        src={pokemon.pokemonImage}
+                        alt={pokemon.name}
+                        width="200px"
+                        height="200px"
+                    />
+                </div>
+
                 <div className={style.types}>
                     <span>Tipo:</span>
                     <ul>

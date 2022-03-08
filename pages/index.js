@@ -1,7 +1,8 @@
 import { useState } from "react";
-import PokemonCard from "../components/pokemonCard";
+import MainContent from "../components/mainContent";
 
 export default function Home({ pokemon }) {
+    // search component programming logic
     const [searchPokemon, setSearchPokemon] = useState([]);
     const [search, setSearch] = useState("");
 
@@ -9,11 +10,9 @@ export default function Home({ pokemon }) {
         setSearch(e.target.value);
     };
 
-    console.log(pokemon);
-
     return (
         <>
-            <PokemonCard
+            <MainContent
                 results={pokemon}
                 searchPokemon={searchPokemon}
                 search={search}
