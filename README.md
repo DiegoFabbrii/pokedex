@@ -42,7 +42,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 > ## Sobre o projeto 
 
-Uma pokedex dos 151 primeiros pokémons.
+Uma pokedex dos 151 primeiros pokémon.
 
 > ## Tecnologias usadas
 
